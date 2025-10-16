@@ -2,6 +2,9 @@
   "version": 3,
   "targets": {
     "net8.0": {
+      "axios/0.16.2": {
+        "type": "package"
+      },
       "Microsoft.AspNetCore.SpaProxy/8.0.20": {
         "type": "package",
         "compile": {
@@ -107,6 +110,19 @@
     }
   },
   "libraries": {
+    "axios/0.16.2": {
+      "sha512": "Xp86hC7/Z4CDwlbM0udtI/Q/AKxsQG7EiZItwtqj3KeZKC1xKxNDImtNPB5e7i6PK2EdOfGns5BtVR6u1V/NEQ==",
+      "type": "package",
+      "path": "axios/0.16.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Content/Scripts/axios.js",
+        "Content/Scripts/axios.min.js",
+        "axios.0.16.2.nupkg.sha512",
+        "axios.nuspec"
+      ]
+    },
     "Microsoft.AspNetCore.SpaProxy/8.0.20": {
       "sha512": "TxWBxx2PiuaL1c5fpQdccNqnSe+Ck+R8EDd2GHG7jo6rlSVqFugceix/QckLmIn0wAQJhiWz//s+O5o/WcbBbQ==",
       "type": "package",
@@ -474,7 +490,8 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "Microsoft.AspNetCore.SpaProxy >= 8.*-*",
-      "Swashbuckle.AspNetCore >= 6.6.2"
+      "Swashbuckle.AspNetCore >= 6.6.2",
+      "axios >= 0.16.2"
     ]
   },
   "packageFolders": {
@@ -534,6 +551,10 @@
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[6.6.2, )"
+          },
+          "axios": {
+            "target": "Package",
+            "version": "[0.16.2, )"
           }
         },
         "imports": [

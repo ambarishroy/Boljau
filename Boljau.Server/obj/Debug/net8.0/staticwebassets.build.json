@@ -1,0 +1,24 @@
+{
+  "Version": 1,
+  "Hash": "Nel6vKpmboIPBDnJKzv6UL86xdmei6rAe4tKXUHT/+c=",
+  "Source": "Boljau.Server",
+  "BasePath": "_content/Boljau.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "D:\\Boljau\\boljau.client\\boljau.client.esproj",
+      "Version": 2,
+      "Source": "boljau.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
