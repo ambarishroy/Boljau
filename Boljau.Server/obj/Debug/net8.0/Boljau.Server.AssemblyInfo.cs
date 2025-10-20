@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Boljau.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5a43a0968dd4b57ad72bfeb8d45c4893f1788b32")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f688995bec2990b73620c0d29ee8dc254abebcd")]
 [assembly: System.Reflection.AssemblyProductAttribute("Boljau.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Boljau.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

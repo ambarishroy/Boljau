@@ -47,11 +47,15 @@ namespace Boljau.Server.Controllers
         public async Task<IActionResult> GetEventsAsync([FromBody] EventsSearchRequest obj)
         {
             var url = $"https://app.ticketmaster.com/discovery/v2/events.json?apikey={apiKey}" +
-                  $"&keyword={obj.Keyword}" +
-                  $"&countryCode={obj.CountryCode}";
-            if (!string.IsNullOrEmpty(obj.City))
+                  $"&keyword={obj.Keyword}";
+
+            if (!string.IsNullOrEmpty(obj.CountryCode))
             {
-                url += $"&city={obj.City}";
+                url += $"&countryCode={obj.CountryCode}";
+            }
+                if (!string.IsNullOrEmpty(obj.City))
+            {
+                url += $"&city={obj.City}"; 
             }
             if (!string.IsNullOrEmpty(obj.StartDate) && !string.IsNullOrEmpty(obj.EndDate))
             {
