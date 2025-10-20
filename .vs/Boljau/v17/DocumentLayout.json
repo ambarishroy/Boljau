@@ -1,0 +1,108 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Boljau\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5EA61EDB-0183-4642-85A4-3B1FED3BB78E}|boljau.client\\boljau.client.esproj|d:\\boljau\\boljau.client\\src\\components\\eventlist.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{5EA61EDB-0183-4642-85A4-3B1FED3BB78E}|boljau.client\\boljau.client.esproj|solutionrelative:boljau.client\\src\\components\\eventlist.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EA61EDB-0183-4642-85A4-3B1FED3BB78E}|boljau.client\\boljau.client.esproj|d:\\boljau\\boljau.client\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{5EA61EDB-0183-4642-85A4-3B1FED3BB78E}|boljau.client\\boljau.client.esproj|solutionrelative:boljau.client\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F720326A-DAB0-4C4B-930A-FCA1F6A52215}|Boljau.Server\\Boljau.Server.csproj|d:\\boljau\\boljau.server\\controllers\\events.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F720326A-DAB0-4C4B-930A-FCA1F6A52215}|Boljau.Server\\Boljau.Server.csproj|solutionrelative:boljau.server\\controllers\\events.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EA61EDB-0183-4642-85A4-3B1FED3BB78E}|boljau.client\\boljau.client.esproj|d:\\boljau\\boljau.client\\src\\components\\searchevent.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{5EA61EDB-0183-4642-85A4-3B1FED3BB78E}|boljau.client\\boljau.client.esproj|solutionrelative:boljau.client\\src\\components\\searchevent.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EventList.jsx",
+              "DocumentMoniker": "D:\\Boljau\\boljau.client\\src\\Components\\EventList.jsx",
+              "RelativeDocumentMoniker": "boljau.client\\src\\Components\\EventList.jsx",
+              "ToolTip": "D:\\Boljau\\boljau.client\\src\\Components\\EventList.jsx",
+              "RelativeToolTip": "boljau.client\\src\\Components\\EventList.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-10-20T12:03:47.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Events.cs",
+              "DocumentMoniker": "D:\\Boljau\\Boljau.Server\\Controllers\\Events.cs",
+              "RelativeDocumentMoniker": "Boljau.Server\\Controllers\\Events.cs",
+              "ToolTip": "D:\\Boljau\\Boljau.Server\\Controllers\\Events.cs",
+              "RelativeToolTip": "Boljau.Server\\Controllers\\Events.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAuwFEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T11:32:41.1Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.jsx",
+              "DocumentMoniker": "D:\\Boljau\\boljau.client\\src\\App.jsx",
+              "RelativeDocumentMoniker": "boljau.client\\src\\App.jsx",
+              "ToolTip": "D:\\Boljau\\boljau.client\\src\\App.jsx",
+              "RelativeToolTip": "boljau.client\\src\\App.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-10-16T17:24:37.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SearchEvent.jsx",
+              "DocumentMoniker": "D:\\Boljau\\boljau.client\\src\\Components\\SearchEvent.jsx",
+              "RelativeDocumentMoniker": "boljau.client\\src\\Components\\SearchEvent.jsx",
+              "ToolTip": "D:\\Boljau\\boljau.client\\src\\Components\\SearchEvent.jsx",
+              "RelativeToolTip": "boljau.client\\src\\Components\\SearchEvent.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-10-16T17:23:13.933Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

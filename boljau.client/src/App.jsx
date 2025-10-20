@@ -16,7 +16,7 @@ function App() {
         axios.post("https://localhost:7133/api/events/search", criteria)
             .then(response => {
                 const data = response.data;
-                setEvents(data._embedded.events)
+                setEvents(data._embedded?.events || [])
             })
             .catch(error => console.error(error));
     }

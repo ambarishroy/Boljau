@@ -2,8 +2,11 @@ import React from 'react'
 function EventList({ events }){
     return (
         <div>
-        <h1>Events</h1>
-            {events.map((el) => (
+            <h1>Events</h1>
+        
+            {events.length===0?(<p>No events found</p>):
+
+                (events.map((el) => (
                 <div key={el.id} style={{
                     border: "1px solid #ccc",
                     padding: "10px",
@@ -17,7 +20,7 @@ function EventList({ events }){
                     <p>Date: {el.dates?.start?.localDate}</p>
                     <p>More info:<a href={el.url} target="_blank">{el.url}</a></p>
                 </div>
-            ))}
+            )))}
         </div>
     )
 }
