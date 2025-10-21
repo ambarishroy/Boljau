@@ -1,4 +1,4 @@
-﻿import React from 'react';
+﻿import React, { useState } from 'react';
 import {
     CardActions,
     CardContent,
@@ -7,10 +7,15 @@ import {
     Card,
     Typography,
     Button,
-    CardMedia
+    CardMedia, Pagination, Box
 } from '@mui/material';
 
 function EventList({ events }) {
+    const [page, setPage] = useState(1);
+    const eventsPerPage = 16;
+    const handleChange = (event, value) => {
+        setPage(value);
+    };
     if (events.length === 0) {
         return (
             <Paper elevation={3} sx={{ p: 3, textAlign: "center", borderRadius: 3 }}>
@@ -20,9 +25,14 @@ function EventList({ events }) {
             </Paper>
         );
     }
+
+        const startIndex = (page - 1) * eventsPerPage;
+        const paginatedEvents = events.slice(startIndex, startIndex + eventsPerPage);
+        const totalPages = Math.ceil(events.length / eventsPerPage);
     return (
-        <Grid container spacing={3}>            
-            {events.map((el) => (
+        <>
+            <Grid container spacing={3}>
+                {paginatedEvents.map((el) => (
                 <Grid size={3} key={el.id}>
                     <Card sx={{
                             maxWidth:345,
@@ -49,8 +59,21 @@ function EventList({ events }) {
                         </CardActions>
                     </Card>
                 </Grid>                  
-                ))}             
+            ))}             
         </Grid>
+        <Box sx={{ display: "flex", justifyContent: "center", mt: 4 }}>
+        <Pagination
+                    count={totalPages}
+                    page={page}
+                    onChange={handleChange}
+                    color="secondary"
+                    sx={{
+                        '& .MuiPaginationItem-root': {
+                            color: '#1976d2',           
+                        }}}
+        />
+            </Box>
+        </>
     )
 }
 export default EventList;
