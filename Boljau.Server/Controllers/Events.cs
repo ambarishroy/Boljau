@@ -59,9 +59,13 @@ namespace Boljau.Server.Controllers
             }
             if (!string.IsNullOrEmpty(obj.StartDate) && !string.IsNullOrEmpty(obj.EndDate))
             {
-                url += $"&startDateTime={obj.StartDate}T00:00:00Z&endDateTime={obj.EndDate}T23:59:59Z";
+                url += $"&startDateTime={obj.StartDate}T00:00:00Z";
             }
-            try
+            if (!string.IsNullOrEmpty(obj.EndDate))
+            {
+                url += $"&endDateTime={obj.EndDate}T23:59:59Z";
+            }
+                try
             {
                 var response =await _httpClient.GetAsync(url);
                 if (response.IsSuccessStatusCode)
