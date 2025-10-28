@@ -2,9 +2,12 @@
 import axios from 'axios';
 import EventList from './Components/EventList';
 import EventSearch from './Components/SearchEvent';
-import { Container, Typography, Box, Stack, AppBar, Button, Toolbar, IconButton, Fab } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
+import {Typography, Box, AppBar, Button, Toolbar, Fab } from '@mui/material';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import {BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
+import About from './Components/About';
+import Footer from './Components/Footer'
+
 
 function App() {
     const [events, setEvents] = useState([]);
@@ -39,48 +42,49 @@ function App() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
     return (
-        <>
-        <AppBar elevation={ 3} position="fixed" color="primary">
-                <Toolbar>
+        
+            <Router>
+                <AppBar elevation={3} position="fixed" sx={{ backgroundColor:"#323270" }}>
+                     <Toolbar>
+                         <Typography variant="h3" sx={{ flexGrow: 1, fontWeight: 'bold', textAlign:'center' }}>
+                             Bol jau!
+                             </Typography>
+                             <Button color="inherit" component={ Link} to="/">Home</Button>
+                         <Button color="inherit" component={Link} to="/about">About</Button>
+                     </Toolbar>
+                 </AppBar>
+                <Routes>
+                    <Route path="/about" element={<About />} />                   
+                </Routes>
+                <Box
+                    sx={{
+                        mt: 1,
+                        width: "100vw",
+                        minHeight: "100vh",
+                        backgroundImage: `
+                        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)),
+                        url('/Images/concertBG.jpg')`,
+                        backgroundSize: "cover",
+                        backgroundRepeat: "no-repeat",
+                        backgroundPosition: "center",
+                        overflowX: "hidden",
+                    pb: 2,
+                        alignItems:"center"
+                    }}>
 
-                    <Typography variant="h3" sx={{ flexGrow: 1, fontWeight: 'bold', textAlign:'center' }}>
-                        Bol jau!
-                    </Typography>
-                    <Button color="inherit">About</Button>
-                    <Button color="inherit">Login</Button>
-                </Toolbar>
-        </AppBar>
-            
-            <Container
-                disableGutters
-                sx={{
-                    mt: 1,
-                    px: 0,
-                    maxWidth: "100% !important",
-                    overflowX: "hidden",     // ✅ no horizontal scroll
-                }}
-            >
-
-
-
-            <Box sx={{ textAlign: "center", mb: 4 }}>
-                <Typography variant="subtitle">
-                    Discover Events Around the world!
-                </Typography> 
+                    <Box sx={{ position: "relative", zIndex: 2, p: 3 }}>
+                        <Typography variant="h4">Discover Events Around the World!</Typography>
+                        <EventSearch onSearch={handleSearch} />
+                    </Box>      
+                    <EventList events={events} />                     
             </Box>
-            <Stack sx={{mb:1.5}}>
-                <EventSearch onSearch={handleSearch} />
-            </Stack>        
-            <EventList events={events} />          
-           
-            </Container>
             {scroll && (
                 <Fab
                     color="secondary"
                     onClick={scrollToTop}
                     sx={{
                         position: 'fixed',
-                        bottom: 24,
+                        bottom: 75,
                         right: 24,
                         zIndex: 1000,
                         boxShadow: 4,
@@ -89,8 +93,10 @@ function App() {
                 >
                     <KeyboardArrowUpIcon />
                 </Fab>
-            )}
-        </>
+                )}
+                <Footer/>
+        </Router>
+        
     )
 }
 export default App;

@@ -7,7 +7,7 @@ import {
     Card,
     Typography,
     Button,
-    CardMedia, Pagination, Box
+    CardMedia, Pagination, Box, Fade
 } from '@mui/material';
 
 function EventList({ events }) {
@@ -18,13 +18,18 @@ function EventList({ events }) {
     };
     if (events.length === 0) {
         return (
-            <Paper elevation={3} sx={{ p: 3, textAlign: "center", borderRadius: 3 }}>
-                <Typography variant="h6" color="text.secondary">
-                    No events found
-                </Typography>
-            </Paper>
+            <Fade in timeout={700}>
+                <Paper elevation={3} sx={{ p: 3, textAlign: "center", borderRadius: 3 }}>
+
+                        <Typography variant="h6" color="text.secondary">
+                            No events found
+                        </Typography>
+                    </Paper>
+            </Fade>
         );
     }
+
+
 
         const startIndex = (page - 1) * eventsPerPage;
     const validEvents = events.filter(
@@ -45,7 +50,7 @@ function EventList({ events }) {
                         lg: "repeat(4, minmax(300px, 1fr))",  
                     },
 
-                    gap: 2,
+                    gap: 3,
                     justifyItems: "stretch",
                     width: "100%",
                     maxWidth: "100%",           
@@ -57,6 +62,7 @@ function EventList({ events }) {
             >
 
                 {paginatedEvents.map((el) => (
+                    
                     <Card
                         key={el.id}
                         sx={{
@@ -76,7 +82,6 @@ function EventList({ events }) {
                             image={el.images?.[1]?.url || el.images?.[0]?.url || "/placeholder.jpg"}
                             sx={{
                                 aspectRatio: "16 / 9",
-                                //height: 160,
                                 width: "100%",
                                 objectFit: "cover",
                                 borderTopLeftRadius: "12px",
@@ -107,6 +112,7 @@ function EventList({ events }) {
                             </Button>
                         </CardActions>
                     </Card>
+                    
                 ))}
             </Box>
 

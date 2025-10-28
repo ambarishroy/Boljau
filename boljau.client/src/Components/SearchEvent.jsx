@@ -31,7 +31,7 @@ function EventSearch({ onSearch }) {
     }
     return (
         <LocalizationProvider dateAdapter={AdapterDayjs}>
-            <Paper elevation={3} sx={{ p: 3, borderRadius: 3}}>
+            <Paper elevation={3} sx={{ p: 3, borderRadius: 3,  opacity:0.8}}>
                 <Typography variant="h6" sx={{
                     mb: 2, fontWeight: "bold", overflow: "visible",  
                     position: "relative",
@@ -56,10 +56,18 @@ function EventSearch({ onSearch }) {
                                 >
                                     <MenuItem value=""><em>None</em></MenuItem>
                                     <MenuItem value="AU">Australia</MenuItem>
+                                    <MenuItem value="BE">Belgium</MenuItem>
                                     <MenuItem value="CA">Canada</MenuItem>
+                                    <MenuItem value="FI">Finland</MenuItem>
+                                    <MenuItem value="DE">Germany</MenuItem>
                                     <MenuItem value="IE">Ireland</MenuItem>
                                     <MenuItem value="MX">Mexico</MenuItem>
+                                    <MenuItem value="NL">Netherlands</MenuItem>
                                     <MenuItem value="NZ">New Zealand</MenuItem>
+                                    <MenuItem value="NO">Norway</MenuItem>
+                                    <MenuItem value="SE">Sweden</MenuItem>
+                                    <MenuItem value="ES">Spain</MenuItem>
+                                    <MenuItem value="AE">UAE</MenuItem>
                                     <MenuItem value="GB">UK</MenuItem>
                                     <MenuItem value="US">USA</MenuItem>
                                 </Select>
