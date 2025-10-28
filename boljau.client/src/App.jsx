@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import EventList from './Components/EventList';
 import EventSearch from './Components/SearchEvent';
@@ -51,7 +51,18 @@ function App() {
                 </Toolbar>
         </AppBar>
             
-        <Container maxWidth="xl" sx={{ mt: 1 }}>
+            <Container
+                disableGutters
+                sx={{
+                    mt: 1,
+                    px: 0,
+                    maxWidth: "100% !important",
+                    overflowX: "hidden",     // ✅ no horizontal scroll
+                }}
+            >
+
+
+
             <Box sx={{ textAlign: "center", mb: 4 }}>
                 <Typography variant="subtitle">
                     Discover Events Around the world!

@@ -32,13 +32,17 @@ function EventSearch({ onSearch }) {
     return (
         <LocalizationProvider dateAdapter={AdapterDayjs}>
             <Paper elevation={3} sx={{ p: 3, borderRadius: 3}}>
-                <Typography variant="h6" sx={{ mb: 2, fontWeight: "bold" }}>
+                <Typography variant="h6" sx={{
+                    mb: 2, fontWeight: "bold", overflow: "visible",  
+                    position: "relative",
+                    zIndex: 10
+}}>
                     🔎 Search Events
                 </Typography>
                 <Box component="form" onSubmit={handleSubmit}>
                     <Grid container spacing={2} alignItems="center">
-                        <Grid size={{xs:12, md:2}}>
-                            <TextField type="text" label="Keyword" value={form.Keyword} onChange={(e) => handleChange("Keyword", e.target.value)} />
+                        <Grid size={{ xs: 12, md: 2 }}>
+                            <TextField fullWidth type="text" label="Keyword" value={form.Keyword} onChange={(e) => handleChange("Keyword", e.target.value)} />
                         </Grid>
                         <Grid size={{ xs: 12, md: 2 }}>
                             <FormControl  fullWidth >
@@ -56,14 +60,14 @@ function EventSearch({ onSearch }) {
                                     <MenuItem value="IE">Ireland</MenuItem>
                                     <MenuItem value="MX">Mexico</MenuItem>
                                     <MenuItem value="NZ">New Zealand</MenuItem>
-                                    <MenuItem value="UK">UK</MenuItem>
+                                    <MenuItem value="GB">UK</MenuItem>
                                     <MenuItem value="US">USA</MenuItem>
                                 </Select>
                             </FormControl>
                            
                         </Grid>
                         <Grid size={{ xs: 12, md: 2 }}>
-                            <TextField type="text" placeholder="City" value={form.City} onChange={(e) => handleChange("City", e.target.value)} />
+                            <TextField type="text" placeholder="City" label="City" value={form.City} onChange={(e) => handleChange("City", e.target.value)} />
                         </Grid>
                         <Grid size={{ xs: 12, md: 2 }}>
                             <DatePicker
@@ -79,7 +83,12 @@ function EventSearch({ onSearch }) {
                                 onChange={(newValue) => handleChange("EndDate", newValue)}
                                             />
                         </Grid>                      
-                        <Button type="submit" variant="contained" sx={{height:56}}>Search</Button>                     
+                        {/*<Button type="submit" variant="contained" sx={{height:56}}>Search</Button> */}
+                        <Grid size={{ xs: 12, md:2}}>
+                            <Button type="submit" variant="contained" sx={{ height: 56 }} fullWidth>
+                                Search
+                            </Button>
+                        </Grid>
                     </Grid>
                 </Box>
             </Paper>
