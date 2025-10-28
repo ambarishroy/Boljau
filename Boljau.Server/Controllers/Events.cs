@@ -20,7 +20,7 @@ namespace Boljau.Server.Controllers
         {
             string CountryCode = "IE";
             var url = $"https://app.ticketmaster.com/discovery/v2/events.json?apikey={apiKey}" +
-                 $"&countryCode={CountryCode}";
+                 $"&countryCode={CountryCode}&size=200";
             try
             {
                 var response = await _httpClient.GetAsync(url);
@@ -47,7 +47,7 @@ namespace Boljau.Server.Controllers
         public async Task<IActionResult> GetEventsAsync([FromBody] EventsSearchRequest obj)
         {
             var url = $"https://app.ticketmaster.com/discovery/v2/events.json?apikey={apiKey}" +
-                  $"&keyword={obj.Keyword}";
+                  $"&keyword={obj.Keyword}&size=200";
 
             if (!string.IsNullOrEmpty(obj.CountryCode))
             {
