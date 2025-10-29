@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Boljau\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5EA61EDB-0183-4642-85A4-3B1FED3BB78E}|boljau.client\\boljau.client.esproj|d:\\boljau\\boljau.client\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{5EA61EDB-0183-4642-85A4-3B1FED3BB78E}|boljau.client\\boljau.client.esproj|solutionrelative:boljau.client\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "App.jsx",
+              "DocumentMoniker": "D:\\Boljau\\boljau.client\\src\\App.jsx",
+              "RelativeDocumentMoniker": "boljau.client\\src\\App.jsx",
+              "ToolTip": "D:\\Boljau\\boljau.client\\src\\App.jsx",
+              "RelativeToolTip": "boljau.client\\src\\App.jsx",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAE4AAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-10-29T12:30:48.114Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
