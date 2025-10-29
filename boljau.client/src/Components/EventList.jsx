@@ -20,7 +20,6 @@ function EventList({ events }) {
         return (
             <Fade in timeout={700}>
                 <Paper elevation={3} sx={{ p: 3, textAlign: "center", borderRadius: 3 }}>
-
                         <Typography variant="h6" color="text.secondary">
                             No events found
                         </Typography>

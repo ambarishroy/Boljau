@@ -2,7 +2,7 @@
 import axios from 'axios';
 import EventList from './Components/EventList';
 import EventSearch from './Components/SearchEvent';
-import {Typography, Box, AppBar, Button, Toolbar, Fab } from '@mui/material';
+import {Typography, Box, AppBar, Button, Toolbar, Fab, CircularProgress } from '@mui/material';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import {BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
 import About from './Components/About';
@@ -12,13 +12,17 @@ import Footer from './Components/Footer'
 function App() {
     const [events, setEvents] = useState([]);
     const [scroll, setScroll] = useState(false);
+    const [spinner, setSpinner] = useState(false);
     useEffect(() => {
+        setSpinner(true);
         axios.get("https://localhost:7133/api/events")
             .then(response => {
                 const data = response.data;
-                setEvents(data._embedded?.events|| [])
+                setEvents(data._embedded?.events || []);
+                    setSpinner(false);
             })
             .catch(error => console.error(error));
+
         const handleScroll = () => {
             if (window.scrollY > 100) {
                 setScroll(true);
@@ -30,10 +34,13 @@ function App() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, [])
     function handleSearch(criteria) {
+        setSpinner(true);
+       
         axios.post("https://localhost:7133/api/events/search", criteria)
             .then(response => {
                 const data = response.data;
-                setEvents(data._embedded?.events || [])
+                setEvents(data._embedded?.events || []);
+                setSpinner(false);
             })
             .catch(error => console.error(error));
     }
@@ -42,7 +49,7 @@ function App() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
     return (
-        
+       
             <Router>
                 <AppBar elevation={3} position="fixed" sx={{ backgroundColor:"#323270" }}>
                      <Toolbar>
@@ -68,13 +75,14 @@ function App() {
                         backgroundRepeat: "no-repeat",
                         backgroundPosition: "center",
                         overflowX: "hidden",
-                    pb: 2,
+                        pb: 2,
                         alignItems:"center"
                     }}>
 
                     <Box sx={{ position: "relative", zIndex: 2, p: 3 }}>
-                        <Typography variant="h4">Discover Events Around the World!</Typography>
-                        <EventSearch onSearch={handleSearch} />
+                    <Typography variant="h4">Discover Events Around the World!</Typography>                   
+                    <EventSearch onSearch={handleSearch} />
+                    {spinner ? <Box sx={{ justifyContent: "center", alignItems: "center", display: "flex", mt: 3 }}> <CircularProgress enableTrackSlot size="30px" sx={{ color:"#ffd600" }} /></Box> : null}
                     </Box>      
                     <EventList events={events} />                     
             </Box>
