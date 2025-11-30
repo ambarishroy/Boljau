@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      AWS_REGION: ${{ secrets.AWS_REGION }}
       ECR_REPO: ${{ secrets.ECR_REPO }}
       ECS_CLUSTER: ${{ secrets.ECS_CLUSTER }}
       ECS_SERVICE: ${{ secrets.ECS_SERVICE }}
+      AWS_REGION: ${{ secrets.AWS_REGION }}
 
     steps:
     - name: Checkout code
@@ -31,13 +31,13 @@ jobs:
       run: |
         docker build -t $ECR_REPO:latest .
 
-    - name: Push Docker image to ECR
+    - name: Push Docker image
       run: |
         docker push $ECR_REPO:latest
 
-    - name: Force ECS service to redeploy new image
+    - name: Update ECS service
       run: |
         aws ecs update-service \
-          --cluster $ECS_CLUSTER \
-          --service $ECS_SERVICE \
+          --cluster "$ECS_CLUSTER" \
+          --service "$ECS_SERVICE" \
           --force-new-deployment
