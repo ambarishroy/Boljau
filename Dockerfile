@@ -5,10 +5,10 @@ FROM node:18 AS frontend-build
 
 WORKDIR /client
 
-COPY Boljau.Client/package*.json ./
+COPY coljau.client/package*.json ./
 RUN npm install
 
-COPY Boljau.Client/ ./
+COPY boljau.client/ ./
 RUN npm run build
 
 
