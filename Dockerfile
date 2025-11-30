@@ -1,7 +1,7 @@
 # ================================
 # 1. Build React Frontend
 # ================================
-FROM node:18 AS frontend-build
+FROM node:20 AS frontend-build
 
 WORKDIR /client
 
