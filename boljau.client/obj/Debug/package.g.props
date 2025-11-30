@@ -14,6 +14,7 @@
     <PackageJsonDependenciesMuiIconsMaterial Condition="$(PackageJsonDependenciesMuiIconsMaterial) == ''">^7.3.4</PackageJsonDependenciesMuiIconsMaterial>
     <PackageJsonDependenciesMuiMaterial Condition="$(PackageJsonDependenciesMuiMaterial) == ''">^7.3.4</PackageJsonDependenciesMuiMaterial>
     <PackageJsonDependenciesMuiXDatePickers Condition="$(PackageJsonDependenciesMuiXDatePickers) == ''">^8.14.1</PackageJsonDependenciesMuiXDatePickers>
+    <PackageJsonDependenciesAxios Condition="$(PackageJsonDependenciesAxios) == ''">^1.13.2</PackageJsonDependenciesAxios>
     <PackageJsonDependenciesDayjs Condition="$(PackageJsonDependenciesDayjs) == ''">^1.11.18</PackageJsonDependenciesDayjs>
     <PackageJsonDependenciesReact Condition="$(PackageJsonDependenciesReact) == ''">^19.1.1</PackageJsonDependenciesReact>
     <PackageJsonDependenciesReactDom Condition="$(PackageJsonDependenciesReactDom) == ''">^19.1.1</PackageJsonDependenciesReactDom>
