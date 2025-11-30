@@ -5,7 +5,7 @@ FROM node:18 AS frontend-build
 
 WORKDIR /client
 
-COPY coljau.client/package*.json ./
+COPY boljau.client/package*.json ./
 RUN npm install
 
 COPY boljau.client/ ./
