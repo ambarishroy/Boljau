@@ -1,11 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boljau.Server", "Boljau.Server\Boljau.Server.csproj", "{F720326A-DAB0-4C4B-930A-FCA1F6A52215}"
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "boljau.client", "boljau.client\boljau.client.esproj", "{5EA61EDB-0183-4642-85A4-3B1FED3BB78E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B520D352-0D79-4332-8199-D35ADA7DFF39}"
+	ProjectSection(SolutionItems) = preProject
+		Dockerfile = Dockerfile
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
